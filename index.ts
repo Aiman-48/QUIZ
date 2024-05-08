@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 import inquirer from "inquirer";
 import chalk from "chalk";
 
@@ -56,54 +58,56 @@ const questions = [
  
   },
 ];
-
+// calculate score
 function calculateScore(answers: Record<string, any>): number {
+
     let score = 0;
   
     if (answers.q1 === "+") {
       score++;
-      console.log(chalk.bold.italic.blue(" Correct answer"));
+      console.log(chalk.bold.italic.blue("Question 1: Correct answer"));
     } else {
-      console.log(chalk.bold.red(" Wrong answer"));
+      console.log(chalk.bold.red("Question 1: Wrong answer"));
     }
   
     if (answers.q2 === "To assign a value to a variable") {
       score++;
-      console.log(chalk.bold.italic.blue(" Correct answer"));
+      console.log(chalk.bold.italic.blue("Question 2: Correct answer"));
     } else {
-      console.log(chalk.bold.red("Wrong answer"));
+      console.log(chalk.bold.red("Question 2: Wrong answer"));
     }
   
     if (answers.q3 === "++") {
       score++;
-      console.log(chalk.bold.italic.blue(" Correct answer"));
+      console.log(chalk.bold.italic.blue("Question 3: Correct answer"));
     } else {
-      console.log(chalk.bold.red(" Wrong answer"));
+      console.log(chalk.bold.red("Question 3: Wrong answer"));
     }
   
     if (answers.q4 === "false") {
       score++;
-      console.log(chalk.bold.italic.blue(" Correct answer"));
+      console.log(chalk.bold.italic.blue("Question 4: Correct answer"));
     } else {
-      console.log(chalk.bold.red(" Wrong answer"));
+      console.log(chalk.bold.red("Question 4: Wrong answer"));
     }
   
     if (answers.q5 === "to find the remainder of a division operation") {
       score++;
-      console.log(chalk.bold.italic.blue(" Correct answer"));
+      console.log(chalk.bold.italic.blue("Question 5: Correct answer"));
     } else {
-      console.log(chalk.bold.red("Wrong answer"));
+      console.log(chalk.bold.red("Question 5: Wrong answer"));
     }
   
     if (answers.q6 === "**") {
       score++;
-      console.log(chalk.bold.italic.blue(" Correct answer"));
+      console.log(chalk.bold.italic.blue("Question 6: Correct answer"));
     } else {
-      console.log(chalk.bold.red(" Wrong answer"));
+      console.log(chalk.bold.red("Question 6: Wrong answer"));
     }
   
     return score;
   }
+
 // Run the quiz
 async function runQuiz() {
   
