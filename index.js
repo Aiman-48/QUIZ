@@ -48,21 +48,50 @@ const questions = [
         choices: ["^", "**", "%"],
     },
 ];
-// Function to calculate the quiz score
 function calculateScore(answers) {
     let score = 0;
-    if (answers.q1 === "+")
+    if (answers.q1 === "+") {
         score++;
-    if (answers.q2 === "To assign a value to a variable")
+        console.log(chalk.bold.italic.blue(" Correct answer"));
+    }
+    else {
+        console.log(chalk.bold.red(" Wrong answer"));
+    }
+    if (answers.q2 === "To assign a value to a variable") {
         score++;
-    if (answers.q3 === "++")
+        console.log(chalk.bold.italic.blue(" Correct answer"));
+    }
+    else {
+        console.log(chalk.bold.red("Wrong answer"));
+    }
+    if (answers.q3 === "++") {
         score++;
-    if (answers.q4 === "false")
+        console.log(chalk.bold.italic.blue(" Correct answer"));
+    }
+    else {
+        console.log(chalk.bold.red(" Wrong answer"));
+    }
+    if (answers.q4 === "false") {
         score++;
-    if (answers.q5 === "to find the remainder of a division operation")
+        console.log(chalk.bold.italic.blue(" Correct answer"));
+    }
+    else {
+        console.log(chalk.bold.red(" Wrong answer"));
+    }
+    if (answers.q5 === "to find the remainder of a division operation") {
         score++;
-    if (answers.q6 === "**")
+        console.log(chalk.bold.italic.blue(" Correct answer"));
+    }
+    else {
+        console.log(chalk.bold.red("Wrong answer"));
+    }
+    if (answers.q6 === "**") {
         score++;
+        console.log(chalk.bold.italic.blue(" Correct answer"));
+    }
+    else {
+        console.log(chalk.bold.red(" Wrong answer"));
+    }
     return score;
 }
 // Run the quiz
